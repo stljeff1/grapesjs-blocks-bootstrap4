@@ -1,7 +1,7 @@
 export const ListBlock = (bm, label) => {
     bm.add('list', {
         label: label,
-        category: 'Basic',
+        category: 'Bootstrap Basic',
         attributes: {class:'fa fa-list'},
         content: {
             type: 'list'

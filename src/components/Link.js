@@ -7,12 +7,12 @@ import _ from "underscore";
 import linkIcon from "raw-loader!../icons/link-solid.svg";
 
 export const LinkBlock = (bm, label) => {
-    bm.add('link', {
+    bm.add('bs-link', {
         label: `
             ${linkIcon}
             <div>${label}</div>
         `,
-        category: 'Basic',
+        category: 'Bootstrap Basic',
         content: {
             type: 'link',
             content: 'Link text'
@@ -28,7 +28,7 @@ export default (editor) => {
     const linkType = comps.getType('link');
     const linkView = linkType.view;
 
-    comps.addType('link', {
+    comps.addType('bs-link', {
         model: textModel.extend({
             defaults: Object.assign({}, textModel.prototype.defaults, {
                 'custom-name': 'Link',
@@ -126,7 +126,7 @@ export default (editor) => {
         }, {
             isComponent(el) {
                 if (el && el.tagName && el.tagName === 'A') {
-                    return {type: 'link'};
+                    return {type: 'bs-link'};
                 }
             }
         }),
