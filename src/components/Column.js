@@ -1,14 +1,14 @@
 import columnsIcon from "raw-loader!../icons/columns-solid.svg";
 
 export const ColumnBlock = (bm, label) => {
-    bm.add('column').set({
+    bm.add('bs-column').set({
         label: `
             ${columnsIcon}
             <div>${label}</div>
         `,
         category: 'Bootstrap Layout',
         content: {
-            type: 'column',
+            type: 'bs-column',
             classes: ['col']
         }
     });
@@ -20,7 +20,7 @@ export default (domc, editor) => {
     const defaultView = defaultType.view;
     const spans = [1,2,3,4,5,6,7,8,9,10,11,12];
 
-    domc.addType('column', {
+    domc.addType('bs-column', {
         model: defaultModel.extend({
             defaults: Object.assign({}, defaultModel.prototype.defaults, {
                 'custom-name': 'Column',
@@ -230,7 +230,7 @@ export default (domc, editor) => {
                         }
                     });
                 }
-                if(match) return {type: 'column'};
+                if(match) return {type: 'bs-column'};
             }
         }),
         view: defaultView

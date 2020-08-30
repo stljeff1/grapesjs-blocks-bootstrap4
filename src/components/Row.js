@@ -1,7 +1,7 @@
 import windowIcon from "raw-loader!../icons/window-maximize-solid.svg";
 
 export const RowBlock = (bm, label) => {
-    bm.add('row').set({
+    bm.add('bs-row').set({
         label: `
             ${windowIcon}
             <div>${label}</div>
@@ -19,7 +19,7 @@ export default (domc) => {
     const defaultModel = defaultType.model;
     const defaultView = defaultType.view;
 
-    domc.addType('row', {
+    domc.addType('bs-row', {
         model: defaultModel.extend({
             defaults: Object.assign({}, defaultModel.prototype.defaults, {
                 'custom-name': 'Row',

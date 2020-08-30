@@ -1,14 +1,14 @@
 import windowIcon from "raw-loader!../icons/window-maximize-solid.svg";
 
 export const ContainerBlock = (bm, label) => {
-    bm.add('container').set({
+    bm.add('bs-container').set({
         label: `
             ${windowIcon}
             <div>${label}</div>
         `,
         category: 'Bootstrap Layout',
         content: {
-            type: 'container',
+            type: 'bs-container',
             classes: ['container']
         }
     });
@@ -19,7 +19,7 @@ export default (domc) => {
     const defaultModel = defaultType.model;
     const defaultView = defaultType.view;
 
-    domc.addType('container', {
+    domc.addType('bs-container', {
         model: defaultModel.extend({
             defaults: Object.assign({}, defaultModel.prototype.defaults, {
                 'custom-name': 'Container',
@@ -39,7 +39,7 @@ export default (domc) => {
         }, {
             isComponent(el) {
                 if(el && el.classList && (el.classList.contains('container') || el.classList.contains('container-fluid'))) {
-                    return {type: 'container'};
+                    return {type: 'bs-container'};
                 }
             }
         }),
