@@ -10,7 +10,7 @@ export const CollapseBlock = (bm, label) => {
             ${compressIcon}
             <div>${label}</div>
         `,
-    category: 'Components',
+    category: 'Bootstrap Components',
     content: {
       type: 'collapse'
     }

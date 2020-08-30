@@ -6,7 +6,7 @@ export const MediaObjectBlock = (bm, label) => {
             ${columnsIcon}
             <div>${label}</div>
         `,
-        category: 'Layout',
+        category: 'Bootstrap Layout',
         content: `<div class="media">
                  <img class="mr-3" src="">
                  <div class="media-body">

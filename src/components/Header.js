@@ -6,7 +6,7 @@ export const HeaderBlock = (bm, label) => {
             ${headingIcon}
             <div>${label}</div>
         `,
-        category: 'Typography',
+        category: 'Bootstrap Typography',
         content: {
             type: 'header',
             content: 'Bootstrap heading'

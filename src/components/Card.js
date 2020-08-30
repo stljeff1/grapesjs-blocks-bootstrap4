@@ -11,7 +11,7 @@ export const CardBlock = (bm, c) => {
             ${cardIcon}
             <div>${c.labels.card}</div>
         `,
-    category: 'Components',
+    category: 'Bootstrap Components',
     content: {
       type: 'card'
     }
@@ -21,7 +21,7 @@ export const CardBlock = (bm, c) => {
             ${cardIcon}
             <div>${c.labels.card_container}</div>
         `,
-    category: 'Components',
+    category: 'Bootstrap Components',
     content: {
       type: 'card_container'
     }
@@ -324,7 +324,7 @@ export default (domc, editor) => {
               {value: 'card-deck', name: 'Deck'},
               {value: 'card-columns', name: 'Columns'},
             ],
-            label: 'Layout',
+            label: 'Bootstrap Layout',
           }
         ].concat(defaultModel.prototype.defaults.traits)
       })

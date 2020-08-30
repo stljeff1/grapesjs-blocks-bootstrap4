@@ -5,7 +5,7 @@ export const TextareaBlock = (bm, label) => {
         label: `
       ${textareaIcon}
       <div>${label}</div>`,
-        category: 'Forms',
+        category: 'Bootstrap Forms',
         content: '<textarea name="textarea1" class="form-control"></textarea>',
     });
 };

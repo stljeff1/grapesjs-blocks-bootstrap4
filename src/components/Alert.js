@@ -8,7 +8,7 @@ export const AlertBlock = (bm, label) => {
             ${exclamationIcon}
             <div>${label}</div>
         `,
-        category: 'Components',
+        category: 'Bootstrap Components',
         content: {
             type: 'alert',
             content: 'This is an alert—check it out!'

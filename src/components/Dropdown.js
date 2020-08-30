@@ -11,14 +11,14 @@ export const DropDownBlock = (bm, label) => {
             ${caretIcon}
             <div>${label}</div>
         `,
-        category: 'Components',
+        category: 'Bootstrap Components',
         content: {
             type: 'dropdown'
         }
     });
     /*bm.add('dropdown_menu', {
       label: c.labels.dropdown_menu,
-      category: 'Components',
+      category: 'Bootstrap Components',
       attributes: {class:'fa fa-caret-down'},
       content: {
         type: 'dropdown_menu'
@@ -26,7 +26,7 @@ export const DropDownBlock = (bm, label) => {
     });
     bm.add('dropdown_item', {
       label: c.labels.dropdown_item,
-      category: 'Components',
+      category: 'Bootstrap Components',
       attributes: {class:'fa fa-link'},
       content: {
         type: 'dropdown_item'

@@ -6,7 +6,7 @@ export const RadioBlock = (bm, label) => {
             ${radioIcon}
             <div>${label}</div>
         `,
-        category: 'Forms',
+        category: 'Bootstrap Forms',
         content: `
         <div class="form-check">
           <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>

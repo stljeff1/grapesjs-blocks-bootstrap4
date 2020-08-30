@@ -6,7 +6,7 @@ export const ContainerBlock = (bm, label) => {
             ${windowIcon}
             <div>${label}</div>
         `,
-        category: 'Layout',
+        category: 'Bootstrap Layout',
         content: {
             type: 'container',
             classes: ['container']

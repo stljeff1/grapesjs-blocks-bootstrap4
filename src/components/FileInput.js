@@ -7,7 +7,7 @@ export const FileInputBlock = (bm, label) => {
             ${fileInputIcon}
             <div>${label}</div>
         `,
-        category: 'Forms',
+        category: 'Bootstrap Forms',
         content: `<input type="file" name="file" class="form-control-file" id="exampleFormControlFile1">`
     });
 };

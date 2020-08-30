@@ -6,7 +6,7 @@ export const ColumnBlock = (bm, label) => {
             ${columnsIcon}
             <div>${label}</div>
         `,
-        category: 'Layout',
+        category: 'Bootstrap Layout',
         content: {
             type: 'column',
             classes: ['col']

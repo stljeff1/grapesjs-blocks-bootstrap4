@@ -6,7 +6,7 @@ export const ParagraphBlock = (bm, label) => {
             ${paragraphIcon}
             <div>${label}</div>
         `,
-        category: 'Typography',
+        category: 'Bootstrap Typography',
         content: {
             type: 'paragraph',
             content: 'Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.'

@@ -10,7 +10,7 @@ export const TabsBlock = (bm, c) => {
             ${ellipsisIcon}
             <div>${c.labels.tabs}</div>
         `,
-        category: 'Components',
+        category: 'Bootstrap Components',
         content: `
             <ul class="nav nav-tabs" role="tablist">
               <li class="nav-item">
@@ -35,7 +35,7 @@ export const TabsBlock = (bm, c) => {
             ${circleIcon}
             <div>${c.labels.tab}</div>
         `,
-        category: 'Components',
+        category: 'Bootstrap Components',
         content: {
             type: 'tabs-tab',
         }
@@ -45,7 +45,7 @@ export const TabsBlock = (bm, c) => {
             ${windowIcon}
             <div>${c.labels.tabPane}</div>
         `,
-        category: 'Components',
+        category: 'Bootstrap Components',
         content: {
             type: 'tabs-tab-pane',
         }
@@ -86,7 +86,7 @@ export default (dc, config = {}) => {
                             {value: 'nav-fill', name: 'Fill'},
                             {value: 'nav-justified', name: 'Justify'},
                         ],
-                        label: 'Layout',
+                        label: 'Bootstrap Layout',
                     },
                 ],
             },

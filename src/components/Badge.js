@@ -8,7 +8,7 @@ export const BadgeBlock = (bm, label) => {
             ${certificateIcon}
             <div>${label}</div>
         `,
-        category: 'Components',
+        category: 'Bootstrap Components',
         content: {
             type: 'badge',
             content: 'New!'

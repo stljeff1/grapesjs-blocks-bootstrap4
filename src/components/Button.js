@@ -6,7 +6,7 @@ import buttonIcon from "raw-loader!../icons/button.svg";
 export const ButtonBlock = (bm, label) => {
     bm.add('button', {
         label: `${buttonIcon}<div>${label}</div>`,
-        category: 'Forms',
+        category: 'Bootstrap Forms',
         content: '<button class="btn btn-primary">Send</button>',
     });
 };
