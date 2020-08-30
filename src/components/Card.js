@@ -324,7 +324,7 @@ export default (domc, editor) => {
               {value: 'card-deck', name: 'Deck'},
               {value: 'card-columns', name: 'Columns'},
             ],
-            label: 'Bootstrap Layout',
+            label: 'Layout',
           }
         ].concat(defaultModel.prototype.defaults.traits)
       })

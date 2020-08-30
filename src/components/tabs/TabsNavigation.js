@@ -86,7 +86,7 @@ export default (dc, config = {}) => {
                             {value: 'nav-fill', name: 'Fill'},
                             {value: 'nav-justified', name: 'Justify'},
                         ],
-                        label: 'Bootstrap Layout',
+                        label: 'Layout',
                     },
                 ],
             },
