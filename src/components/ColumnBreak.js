@@ -1,7 +1,7 @@
 import equalsIcon from "raw-loader!../icons/equals-solid.svg";
 
 export const ColumnBreakBlock = (bm, label) => {
-    bm.add('column_break').set({
+    bm.add('column_break', {
         label: `
             ${equalsIcon}
             <div>${label}</div>

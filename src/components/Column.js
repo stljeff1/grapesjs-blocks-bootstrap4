@@ -1,7 +1,7 @@
 import columnsIcon from "raw-loader!../icons/columns-solid.svg";
 
 export const ColumnBlock = (bm, label) => {
-    bm.add('bs-column').set({
+    bm.add('bs-column', {
         label: `
             ${columnsIcon}
             <div>${label}</div>

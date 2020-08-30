@@ -1,7 +1,7 @@
 import columnsIcon from 'raw-loader!../icons/columns-solid.svg';
 
 export const MediaObjectBlock = (bm, label) => {
-    bm.add('media_object').set({
+    bm.add('media_object', {
         label: `
             ${columnsIcon}
             <div>${label}</div>

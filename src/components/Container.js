@@ -1,7 +1,7 @@
 import windowIcon from "raw-loader!../icons/window-maximize-solid.svg";
 
 export const ContainerBlock = (bm, label) => {
-    bm.add('bs-container').set({
+    bm.add('bs-container', {
         label: `
             ${windowIcon}
             <div>${label}</div>
