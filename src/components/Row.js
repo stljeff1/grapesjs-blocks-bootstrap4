@@ -8,7 +8,7 @@ export const RowBlock = (bm, label) => {
         `,
         category: 'Bootstrap Layout',
         content: {
-            type: 'row',
+            type: 'bs-row',
             classes: ['row']
         }
     });
@@ -40,7 +40,7 @@ export default (domc) => {
         }, {
             isComponent(el) {
                 if(el && el.classList && el.classList.contains('row')) {
-                    return {type: 'row'};
+                    return {type: 'bs-row'};
                 }
             }
         }),

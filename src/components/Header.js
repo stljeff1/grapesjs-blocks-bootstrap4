@@ -1,7 +1,7 @@
 import headingIcon from "raw-loader!../icons/heading-solid.svg";
 
 export const HeaderBlock = (bm, label) => {
-    bm.add('header', {
+    bm.add('bs-header', {
         label: `
             ${headingIcon}
             <div>${label}</div>

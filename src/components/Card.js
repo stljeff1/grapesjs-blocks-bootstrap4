@@ -6,24 +6,24 @@ import _ from 'underscore';
 import cardIcon from "raw-loader!../icons/credit-card-solid.svg";
 
 export const CardBlock = (bm, c) => {
-  bm.add('card', {
+  bm.add('bs-card', {
     label: `
             ${cardIcon}
             <div>${c.labels.card}</div>
         `,
     category: 'Bootstrap Components',
     content: {
-      type: 'card'
+      type: 'bs-card'
     }
   });
-  bm.add('card_container', {
+  bm.add('bs-card_container', {
     label: `
             ${cardIcon}
             <div>${c.labels.card_container}</div>
         `,
     category: 'Bootstrap Components',
     content: {
-      type: 'card_container'
+      type: 'bs-card_container'
     }
   });
 };
@@ -37,7 +37,7 @@ export default (domc, editor) => {
   const imageModel = imageType.model;
   const imageView = imageType.view;
 
-  domc.addType('card', {
+  domc.addType('bs-card', {
     model: defaultModel.extend({
       defaults: Object.assign({}, defaultModel.prototype.defaults, {
         'custom-name': 'Card',
@@ -184,14 +184,14 @@ export default (domc, editor) => {
     }, {
       isComponent(el) {
         if(el && el.classList && el.classList.contains('card')) {
-          return {type: 'card'};
+          return {type: 'bs-card'};
         }
       }
     }),
     view: defaultView
   });
 
-  domc.addType('card_image_top', {
+  domc.addType('bs-card_image_top', {
     model: imageModel.extend({
       defaults: Object.assign({}, imageModel.prototype.defaults, {
         'custom-name': 'Card Image Top',
@@ -201,14 +201,14 @@ export default (domc, editor) => {
     }, {
       isComponent(el) {
         if(el && el.classList && el.classList.contains('card-img-top')) {
-          return {type: 'card_image_top'};
+          return {type: 'bs-card_image_top'};
         }
       }
     }),
     view: imageView
   });
 
-  domc.addType('card_header', {
+  domc.addType('bs-card_header', {
     model: defaultModel.extend({
       defaults: Object.assign({}, defaultModel.prototype.defaults, {
         'custom-name': 'Card Header',
@@ -218,14 +218,14 @@ export default (domc, editor) => {
     }, {
       isComponent(el) {
         if(el && el.classList && el.classList.contains('card-header')) {
-          return {type: 'card_header'};
+          return {type: 'bs-card_header'};
         }
       }
     }),
     view: defaultView
   });
 
-  domc.addType('card_image', {
+  domc.addType('bs-card_image', {
     model: imageModel.extend({
       defaults: Object.assign({}, imageModel.prototype.defaults, {
         'custom-name': 'Card Image',
@@ -235,14 +235,14 @@ export default (domc, editor) => {
     }, {
       isComponent(el) {
         if(el && el.classList && el.classList.contains('card-img')) {
-          return {type: 'card_image'};
+          return {type: 'bs-card_image'};
         }
       }
     }),
     view: imageView
   });
 
-  domc.addType('card_image_overlay', {
+  domc.addType('bs-card_image_overlay', {
     model: defaultModel.extend({
       defaults: Object.assign({}, defaultModel.prototype.defaults, {
         'custom-name': 'Card Image Overlay',
@@ -252,14 +252,14 @@ export default (domc, editor) => {
     }, {
       isComponent(el) {
         if(el && el.classList && el.classList.contains('card-img-overlay')) {
-          return {type: 'card_image_overlay'};
+          return {type: 'bs-card_image_overlay'};
         }
       }
     }),
     view: defaultView
   });
 
-  domc.addType('card_body', {
+  domc.addType('bs-card_body', {
     model: defaultModel.extend({
       defaults: Object.assign({}, defaultModel.prototype.defaults, {
         'custom-name': 'Card Body',
@@ -269,14 +269,14 @@ export default (domc, editor) => {
     }, {
       isComponent(el) {
         if(el && el.classList && el.classList.contains('card-body')) {
-          return {type: 'card_body'};
+          return {type: 'bs-card_body'};
         }
       }
     }),
     view: defaultView
   });
 
-  domc.addType('card_footer', {
+  domc.addType('bs-card_footer', {
     model: defaultModel.extend({
       defaults: Object.assign({}, defaultModel.prototype.defaults, {
         'custom-name': 'Card Footer',
@@ -286,14 +286,14 @@ export default (domc, editor) => {
     }, {
       isComponent(el) {
         if(el && el.classList && el.classList.contains('card-footer')) {
-          return {type: 'card_footer'};
+          return {type: 'bs-card_footer'};
         }
       }
     }),
     view: defaultView
   });
 
-  domc.addType('card_image_bottom', {
+  domc.addType('bs-card_image_bottom', {
     model: imageModel.extend({
       defaults: Object.assign({}, imageModel.prototype.defaults, {
         'custom-name': 'Card Image Bottom',
@@ -303,14 +303,14 @@ export default (domc, editor) => {
     }, {
       isComponent(el) {
         if(el && el.classList && el.classList.contains('card-img-bottom')) {
-          return {type: 'card_image_bottom'};
+          return {type: 'bs-card_image_bottom'};
         }
       }
     }),
     view: imageView
   });
 
-  domc.addType('card_container', {
+  domc.addType('bs-card_container', {
     model: defaultModel.extend({
       defaults: Object.assign({}, defaultModel.prototype.defaults, {
         'custom-name': 'Card Container',
@@ -331,7 +331,7 @@ export default (domc, editor) => {
     }, {
       isComponent(el) {
         if(el && el.classList && _.intersection(el.classList, ['card-group','card-deck','card-columns']).length) {
-          return {type: 'card_container'};
+          return {type: 'bs-card_container'};
         }
       }
     }),

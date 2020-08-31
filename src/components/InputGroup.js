@@ -2,7 +2,7 @@ import formGroupIcon from "raw-loader!../icons/form-group.svg";
 import inputGroupIcon from "raw-loader!../icons/input-group.svg";
 
 export const InputGroupBlock = (bm, label, c) => {
-    bm.add('form_group_input', {
+    bm.add('bs-form_group_input', {
         label: `
       ${formGroupIcon}
       <div>${label}</div>`,
@@ -15,7 +15,7 @@ export const InputGroupBlock = (bm, label, c) => {
       `,
     });
 
-    bm.add('input_group', {
+    bm.add('bs-input_group', {
         label: `
       ${inputGroupIcon}
       <div>${label}</div>`,
@@ -50,7 +50,7 @@ export default (dc, traits, config = {}) => {
         }, {
             isComponent(el) {
                 if(el && el.classList && el.classList.contains('form_group_input')) {
-                    return {type: 'form_group_input'};
+                    return {type: 'bs-form_group_input'};
                 }
             },
         }),

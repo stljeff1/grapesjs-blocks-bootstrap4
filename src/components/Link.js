@@ -126,7 +126,7 @@ export default (editor) => {
         }, {
             isComponent(el) {
                 if (el && el.tagName && el.tagName === 'A') {
-                    return {type: 'bs-link'};
+                    return {type: 'link'};
                 }
             }
         }),

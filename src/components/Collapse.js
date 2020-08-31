@@ -5,14 +5,14 @@ known issues:
 import compressIcon from "raw-loader!../icons/compress-solid.svg";
 
 export const CollapseBlock = (bm, label) => {
-  bm.add('collapse', {
+  bm.add('bs-collapse', {
     label: `
             ${compressIcon}
             <div>${label}</div>
         `,
     category: 'Bootstrap Components',
     content: {
-      type: 'collapse'
+      type: 'bs-collapse'
     }
   });
 };
@@ -23,7 +23,7 @@ export default (editor) => {
   const defaultModel = defaultType.model;
   const defaultView = defaultType.view;
 
-  comps.addType('collapse', {
+  comps.addType('bs-collapse', {
     model: defaultModel.extend({
       defaults: Object.assign({}, defaultModel.prototype.defaults, {
         'custom-name': 'Dropdown',
@@ -113,8 +113,8 @@ export default (editor) => {
       }*/
     }, {
       isComponent(el) {
-        if(el && el.classList && el.classList.contains('dropdown')) {
-          return {type: 'dropdown'};
+        if(el && el.classList && el.classList.contains('collapse')) {
+          return {type: 'bs-collapse'};
         }
       }
     }),

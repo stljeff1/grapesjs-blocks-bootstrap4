@@ -1,7 +1,7 @@
 import selectIcon from "raw-loader!../icons/select-input.svg";
 
 export const SelectBlock = (bm, label) => {
-    bm.add('select', {
+    bm.add('bs-select', {
         label: `
       ${selectIcon}
       <div>${label}</div>`,

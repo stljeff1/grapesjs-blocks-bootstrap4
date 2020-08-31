@@ -1,7 +1,7 @@
 import checkIcon from "raw-loader!../icons/check-square-solid.svg";
 
 export const CheckboxBlock = (bm, label) => {
-    bm.add('checkbox', {
+    bm.add('bs-checkbox', {
         label: `
             ${checkIcon}
             <div>${label}</div>
@@ -25,7 +25,7 @@ export default (dc, traits, config = {}) => {
     const inputType = dc.getType('input');
     const inputModel = inputType.model;
 
-    dc.addType('checkbox', {
+    dc.addType('bs-checkbox', {
         model: defaultModel.extend({
             defaults: {
                 ...inputModel.prototype.defaults,
@@ -66,7 +66,7 @@ export default (dc, traits, config = {}) => {
         }, {
             isComponent(el) {
                 if (el.tagName === 'INPUT' && el.type === 'checkbox') {
-                    return {type: 'checkbox'};
+                    return {type: 'bs-checkbox'};
                 }
             },
         }),

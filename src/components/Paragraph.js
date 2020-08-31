@@ -1,7 +1,7 @@
 import paragraphIcon from "raw-loader!../icons/paragraph-solid.svg";
 
 export const ParagraphBlock = (bm, label) => {
-    bm.add('paragraph', {
+    bm.add('bs-paragraph', {
         label: `
             ${paragraphIcon}
             <div>${label}</div>

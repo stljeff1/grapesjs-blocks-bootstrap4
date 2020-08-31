@@ -1,4 +1,4 @@
-const prefix = 'tabs-';
+const prefix = 'bs-tabs-';
 const containerName = `${prefix}container`;
 const navigationName = `${prefix}navigation`;
 const tabPanesName = `${prefix}panes`;

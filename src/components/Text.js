@@ -1,7 +1,7 @@
 import fontIcon from "raw-loader!../icons/font-solid.svg";
 
 export const TextBlock = (bm, label) => {
-    bm.add('text', {
+    bm.add('bs-text', {
         label: `
             ${fontIcon}
             <div>${label}</div>

@@ -1,7 +1,7 @@
 import inputIcon from "raw-loader!../icons/input.svg";
 
 export const InputBlock = (bm, label) => {
-    bm.add('input', {
+    bm.add('bs-input', {
         label: `
       ${inputIcon}
       <div>${label}</div>`,

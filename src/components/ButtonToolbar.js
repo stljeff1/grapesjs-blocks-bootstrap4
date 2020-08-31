@@ -1,14 +1,14 @@
 import buttonIcon from "raw-loader!../icons/button.svg";
 
 export const ButtonToolbarBlock = (bm, label) => {
-    bm.add('button_toolbar', {
+    bm.add('bs-button_toolbar', {
         label: `
             ${buttonIcon}
             <div>${label}</div>
         `,
         category: 'Bootstrap Forms',
         content: {
-            type: 'button_toolbar'
+            type: 'bs-button_toolbar'
         }
     });
 };
@@ -19,7 +19,7 @@ export default (dc) => {
     const defaultModel = defaultType.model;
     const defaultView = defaultType.view;
 
-    dc.addType('button_toolbar', {
+    dc.addType('bs-button_toolbar', {
         model: defaultModel.extend({
             defaults: Object.assign({}, defaultModel.prototype.defaults, {
                 'custom-name': 'Button Toolbar',
@@ -41,7 +41,7 @@ export default (dc) => {
         }, {
             isComponent(el) {
                 if(el && el.classList && el.classList.contains('btn-toolbar')) {
-                    return {type: 'button_toolbar'};
+                    return {type: 'bs-button_toolbar'};
                 }
             }
         }),

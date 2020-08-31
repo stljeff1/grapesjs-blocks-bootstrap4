@@ -6,14 +6,14 @@ known issues:
 import caretIcon from "raw-loader!../icons/caret-square-down-regular.svg";
 
 export const DropDownBlock = (bm, label) => {
-    bm.add('dropdown', {
+    bm.add('bs-dropdown', {
         label: `
             ${caretIcon}
             <div>${label}</div>
         `,
         category: 'Bootstrap Components',
         content: {
-            type: 'dropdown'
+            type: 'bs-dropdown'
         }
     });
     /*bm.add('dropdown_menu', {
@@ -46,7 +46,7 @@ export default (editor) => {
         return eca.filter(e => e.callback.name === 'setupToggle').length !== 0;
     }
 
-    comps.addType('dropdown', {
+    comps.addType('bs-dropdown', {
         model: defaultModel.extend({
             defaults: {
                 ...defaultModel.prototype.defaults,
@@ -150,7 +150,7 @@ export default (editor) => {
         }, {
             isComponent(el) {
                 if (el && el.classList && el.classList.contains('dropdown')) {
-                    return {type: 'dropdown'};
+                    return {type: 'bs-dropdown'};
                 }
             }
         }),
@@ -159,7 +159,7 @@ export default (editor) => {
 
     // need aria-labelledby to equal dropdown-toggle id
     // need to insert dropdown-item class on links when added
-    comps.addType('dropdown_menu', {
+    comps.addType('bs-dropdown_menu', {
         model: defaultModel.extend({
             defaults: Object.assign({}, defaultModel.prototype.defaults, {
                 'custom-name': 'Dropdown Menu',
@@ -191,7 +191,7 @@ export default (editor) => {
         }, {
             isComponent(el) {
                 if (el && el.classList && el.classList.contains('dropdown-menu')) {
-                    return {type: 'dropdown_menu'};
+                    return {type: 'bs-dropdown_menu'};
                 }
             }
         }),

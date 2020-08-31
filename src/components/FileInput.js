@@ -2,7 +2,7 @@ import {elHasClass} from "../utils";
 import fileInputIcon from "raw-loader!../icons/file-input.svg";
 
 export const FileInputBlock = (bm, label) => {
-    bm.add('file-input', {
+    bm.add('bs-file-input', {
         label: `
             ${fileInputIcon}
             <div>${label}</div>
@@ -16,7 +16,7 @@ export default (dc, traits, config = {}) => {
     const defaultType = dc.getType('default');
     const defaultModel = defaultType.model;
     const defaultView = defaultType.view;
-    const type = 'file-input';
+    const type = 'bs-file-input';
 
     dc.addType(type, {
         model: defaultModel.extend({

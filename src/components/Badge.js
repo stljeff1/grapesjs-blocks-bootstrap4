@@ -3,14 +3,14 @@ import contexts from '../bootstrap-contexts';
 import certificateIcon from "raw-loader!../icons/certificate-solid.svg";
 
 export const BadgeBlock = (bm, label) => {
-    bm.add('badge', {
+    bm.add('bs-badge', {
         label: `
             ${certificateIcon}
             <div>${label}</div>
         `,
         category: 'Bootstrap Components',
         content: {
-            type: 'badge',
+            type: 'bs-badge',
             content: 'New!'
         }
     });
@@ -21,7 +21,7 @@ export default (domc) => {
     const textModel = textType.model;
     const textView = textType.view;
 
-    domc.addType('badge', {
+    domc.addType('bs-badge', {
         model: textModel.extend({
             defaults: Object.assign({}, textModel.prototype.defaults, {
                 'custom-name': 'Badge',
@@ -49,7 +49,7 @@ export default (domc) => {
         }, {
             isComponent(el) {
                 if(el && el.classList && el.classList.contains('badge')) {
-                    return {type: 'badge'};
+                    return {type: 'bs-badge'};
                 }
             }
         }),

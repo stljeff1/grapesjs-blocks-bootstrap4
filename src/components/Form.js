@@ -1,7 +1,7 @@
 import formIcon from "raw-loader!../icons/form.svg";
 
 export const FormBlock = (bm, label) => {
-    bm.add('form', {
+    bm.add('bs-form', {
         label: `
       ${formIcon}
       <div>${label}</div>`,

@@ -1,7 +1,7 @@
 import radioIcon from "raw-loader!../icons/dot-circle-regular.svg";
 
 export const RadioBlock = (bm, label) => {
-    bm.add('radio', {
+    bm.add('bs-radio', {
         label: `
             ${radioIcon}
             <div>${label}</div>

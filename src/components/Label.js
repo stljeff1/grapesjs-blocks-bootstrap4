@@ -1,7 +1,7 @@
 import labelIcon from "raw-loader!../icons/label.svg";
 
 export const LabelBlock = (bm, label) => {
-    bm.add('label', {
+    bm.add('bs-label', {
         label: `
       ${labelIcon}
       <div>${label}</div>`,

@@ -3,7 +3,7 @@ import contexts from '../bootstrap-contexts';
 import exclamationIcon from "raw-loader!../icons/exclamation-triangle-solid.svg";
 
 export const AlertBlock = (bm, label) => {
-    bm.add('alert', {
+    bm.add('bs-alert', {
         label: `
             ${exclamationIcon}
             <div>${label}</div>
@@ -21,7 +21,7 @@ export default (domc) => {
     const textModel = textType.model;
     const textView = textType.view;
 
-    domc.addType('alert', {
+    domc.addType('bs-alert', {
         model: textModel.extend({
             defaults: Object.assign({}, textModel.prototype.defaults, {
                 'custom-name': 'Alert',
@@ -41,7 +41,7 @@ export default (domc) => {
         }, {
             isComponent(el) {
                 if(el && el.classList && el.classList.contains('alert')) {
-                    return {type: 'alert'};
+                    return {type: 'bs-alert'};
                 }
             }
         }),

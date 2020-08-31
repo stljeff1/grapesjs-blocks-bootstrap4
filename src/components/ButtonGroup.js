@@ -2,14 +2,14 @@ import sizes from '../bootstrap-btn-sizes';
 import buttonIcon from "raw-loader!../icons/button.svg";
 
 export const ButtonGroupBlock = (bm, label) => {
-    bm.add('button_group', {
+    bm.add('bs-button_group', {
         label: `
             ${buttonIcon}
             <div>${label}</div>
         `,
         category: 'Bootstrap Forms',
         content: {
-            type: 'button_group'
+            type: 'bs-button_group'
         }
     });
 };
@@ -20,7 +20,7 @@ export default (dc) => {
     const defaultModel = defaultType.model;
     const defaultView = defaultType.view;
 
-    dc.addType('button_group', {
+    dc.addType('bs-button_group', {
         model: defaultModel.extend({
             defaults: Object.assign({}, defaultModel.prototype.defaults, {
                 'custom-name': 'Button Group',
@@ -58,7 +58,7 @@ export default (dc) => {
         }, {
             isComponent(el) {
                 if(el && el.classList && el.classList.contains('btn-group')) {
-                    return {type: 'button_group'};
+                    return {type: 'bs-button_group'};
                 }
             }
         }),

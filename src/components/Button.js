@@ -4,7 +4,7 @@ import sizes from '../bootstrap-btn-sizes';
 import buttonIcon from "raw-loader!../icons/button.svg";
 
 export const ButtonBlock = (bm, label) => {
-    bm.add('button', {
+    bm.add('bs-button', {
         label: `${buttonIcon}<div>${label}</div>`,
         category: 'Bootstrap Forms',
         content: '<button class="btn btn-primary">Send</button>',
@@ -16,7 +16,7 @@ export default (dc) => {
     const defaultModel = defaultType.model;
     const defaultView = defaultType.view;
 
-    dc.addType('button', {
+    dc.addType('bs-button', {
         model: defaultModel.extend({
             defaults: {
                 ...defaultModel.prototype.defaults,
@@ -78,7 +78,7 @@ export default (dc) => {
         }, {
             isComponent(el) {
                 if(el && el.classList && el.classList.contains('btn')) {
-                    return {type: 'button'};
+                    return {type: 'bs-button'};
                 }
             }
         }),

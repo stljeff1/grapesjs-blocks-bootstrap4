@@ -22,7 +22,7 @@ export default (domc) => {
     const defaultModel = defaultType.model;
     const defaultView = defaultType.view;
 
-    domc.addType('media_object', {
+    domc.addType('bs-media_object', {
         model: defaultModel.extend({
             defaults: Object.assign({}, defaultModel.prototype.defaults, {
                 'custom-name': 'Media Object',
@@ -32,14 +32,14 @@ export default (domc) => {
         }, {
             isComponent(el) {
                 if(el && el.classList && el.classList.contains('media')) {
-                    return {type: 'media'};
+                    return {type: 'bs-media'};
                 }
             }
         }),
         view: defaultView
     });
 
-    domc.addType('media_body', {
+    domc.addType('bs-media_body', {
         model: defaultModel.extend({
             defaults: Object.assign({}, defaultModel.prototype.defaults, {
                 'custom-name': 'Media Body',
@@ -49,7 +49,7 @@ export default (domc) => {
         }, {
             isComponent(el) {
                 if(el && el.classList && el.classList.contains('media-body')) {
-                    return {type: 'media_body'};
+                    return {type: 'bs-media_body'};
                 }
             }
         }),

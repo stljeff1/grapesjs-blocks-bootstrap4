@@ -1,14 +1,14 @@
 import equalsIcon from "raw-loader!../icons/equals-solid.svg";
 
 export const ColumnBreakBlock = (bm, label) => {
-    bm.add('column_break', {
+    bm.add('bs-column_break', {
         label: `
             ${equalsIcon}
             <div>${label}</div>
         `,
         category: 'Bootstrap Layout',
         content: {
-            type: 'column_break'
+            type: 'bs-column_break'
         }
     });
 };
@@ -18,7 +18,7 @@ export default (domc) => {
     const defaultModel = defaultType.model;
     const defaultView = defaultType.view;
 
-    domc.addType('column_break', {
+    domc.addType('bs-column_break', {
         model: defaultModel.extend({
             defaults: Object.assign({}, defaultModel.prototype.defaults, {
                 'custom-name': 'Column Break',
@@ -28,7 +28,7 @@ export default (domc) => {
         }, {
             isComponent(el) {
                 if(el && el.classList && el.classList.contains('w-100')) { // also check if parent is `.row`
-                    return {type: 'column_break'};
+                    return {type: 'bs-column_break'};
                 }
             }
         }),
