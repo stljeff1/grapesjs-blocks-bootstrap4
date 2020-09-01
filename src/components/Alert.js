@@ -10,7 +10,7 @@ export const AlertBlock = (bm, label) => {
         `,
         category: 'Bootstrap Components',
         content: {
-            type: 'alert',
+            type: 'bs-alert',
             content: 'This is an alert—check it out!'
         }
     });

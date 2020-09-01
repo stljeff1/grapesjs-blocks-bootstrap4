@@ -25,7 +25,7 @@ export default (dc, traits, config = {}) => {
     const inputType = dc.getType('input');
     const inputModel = inputType.model;
 
-    dc.addType('bs-checkbox', {
+    dc.addType('checkbox', {
         model: defaultModel.extend({
             defaults: {
                 ...inputModel.prototype.defaults,
@@ -66,7 +66,7 @@ export default (dc, traits, config = {}) => {
         }, {
             isComponent(el) {
                 if (el.tagName === 'INPUT' && el.type === 'checkbox') {
-                    return {type: 'bs-checkbox'};
+                    return {type: 'checkbox'};
                 }
             },
         }),
