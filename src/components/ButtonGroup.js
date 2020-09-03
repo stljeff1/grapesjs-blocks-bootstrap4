@@ -7,7 +7,7 @@ export const ButtonGroupBlock = (bm, label) => {
             ${buttonIcon}
             <div>${label}</div>
         `,
-        category: 'Bootstrap Forms',
+        category: 'Forms',
         content: {
             type: 'bs-button_group'
         }
