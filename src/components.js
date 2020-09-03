@@ -186,7 +186,7 @@ export default (editor, config = {}) => {
   // TYPOGRAPHY
   if (cats.typography) {
     if (blocks.header) {
-      HeaderBlock(bm, c.labels.header);
+      // HeaderBlock(bm, c.labels.header);
       Header(domc);
     }
     if (blocks.paragraph) {

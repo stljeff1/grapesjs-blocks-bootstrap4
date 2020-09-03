@@ -61,9 +61,9 @@ export default grapesjs.plugins.add('grapesjs-blocks-bootstrap4', (editor, opts 
   delete opts['blockCategories'];
 
   const default_blocks = {
-    default: true,
-    text: true,
-    link: true,
+    default: false,
+    text: false,
+    link: false,
     image: true,
     // LAYOUT
     container: true,
@@ -75,7 +75,7 @@ export default grapesjs.plugins.add('grapesjs-blocks-bootstrap4', (editor, opts 
     alert: true,
     tabs: true,
     badge: true,
-    button: true,
+    button: false,
     button_group: true,
     button_toolbar: true,
     card: true,
@@ -89,15 +89,15 @@ export default grapesjs.plugins.add('grapesjs-blocks-bootstrap4', (editor, opts 
     // BASIC
     list: true,
     // FORMS
-    form: true,
-    input: true,
-    form_group_input: true,
-    input_group: true,
-    textarea: true,
-    select: true,
-    label: true,
-    checkbox: true,
-    radio: true,
+    form: false,
+    input: false,
+    form_group_input: false,
+    input_group: false,
+    textarea: false,
+    select: false,
+    label: false,
+    checkbox: false,
+    radio: false,
   };
 
   const default_labels = {
