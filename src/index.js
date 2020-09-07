@@ -1,10 +1,6 @@
-import grapesjs from 'grapesjs';
-import loadCommands from './commands';
 import loadTraits from './traits';
 import loadComponents from './components';
-import loadDevices from './devices';
-
-export * from './blocks';
+import loadBlocks from './blocks';
 
 const loadCss = editor => {
   editor.Config.canvasCss += `
@@ -51,16 +47,17 @@ const loadCss = editor => {
   `
 };
 
-export default grapesjs.plugins.add('grapesjs-blocks-bootstrap4', (editor, opts = {}) => {
+export default (editor, opts = {}) => {
 
   window.editor = editor;
 
   const opts_blocks = opts.blocks || {};
   const opts_labels = opts.labels || {};
-  const opts_categories = opts.blockCategories || {};
+  const opts_components = opts.components || {};
+  const opts_traits = opts.traits || false;
+  const opts_css = opts.css || false;
   delete opts['blocks'];
   delete opts['labels'];
-  delete opts['blockCategories'];
 
   const default_blocks = {
     default: false,
@@ -177,22 +174,11 @@ export default grapesjs.plugins.add('grapesjs-blocks-bootstrap4', (editor, opts 
     type_button: 'Button',
   };
 
-  const default_categories = {
-    'layout': true,
-    'media': true,
-    'components': true,
-    'typography': true,
-    'basic': true,
-    'forms': true,
-  };
-
   let options = { ...{
+    components: Object.assign(default_components, opts_components),
     blocks: Object.assign(default_blocks, opts_blocks),
     labels: Object.assign(default_labels, opts_labels),
-    blockCategories: Object.assign(default_categories, opts_categories),
     optionsStringSeparator: '::',
-    gridDevices: true,
-    gridDevicesPanel: false,
     classNavigation: 'nav',
     classTabPanes: 'tab-content',
     classTabPane: 'tab-pane',
@@ -200,9 +186,12 @@ export default grapesjs.plugins.add('grapesjs-blocks-bootstrap4', (editor, opts 
   },  ...opts };
 
   // Add components
-  loadCommands(editor, options);
-  loadTraits(editor, options);
+  if (opts_traits) {
+    loadTraits(editor, options);
+  }
   loadComponents(editor, options);
-  loadDevices(editor, options);
-  loadCss(editor, options);
-});
+  loadBlocks(editor, config);
+  if (opts_css) {
+    loadCss(editor, options);
+  }
+};
