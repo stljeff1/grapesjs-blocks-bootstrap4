@@ -190,7 +190,7 @@ export default (editor, opts = {}) => {
     loadTraits(editor, options);
   }
   loadComponents(editor, options);
-  loadBlocks(editor, config);
+  loadBlocks(editor, options);
   if (opts_css) {
     loadCss(editor, options);
   }
