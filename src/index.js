@@ -92,11 +92,6 @@ export default (editor, opts = {}) => {
 };
 
 export const addBlocks = (editor, blocks, opts) => {
-  delete opts['blocks'];
-  delete opts['labels'];
-  delete opts['components'];
-  delete opts['blockCategories'];
-
   let options = { ...{
     blocks,
     labels: Object.assign(default_labels, opts.labels),
