@@ -10,7 +10,7 @@ export const TabsBlock = (bm, c) => {
             ${ellipsisIcon}
             <div>${c.labels.tabs}</div>
         `,
-        category: 'Bootstrap Components',
+        category: c.blockCategories.tabs,
         content: `
             <ul class="nav nav-tabs" role="tablist">
               <li class="nav-item">
@@ -35,7 +35,7 @@ export const TabsBlock = (bm, c) => {
             ${circleIcon}
             <div>${c.labels.tab}</div>
         `,
-        category: 'Bootstrap Components',
+        category: c.blockCategories.tab,
         content: {
             type: 'tabs-tab',
         }
@@ -45,7 +45,7 @@ export const TabsBlock = (bm, c) => {
             ${windowIcon}
             <div>${c.labels.tabPane}</div>
         `,
-        category: 'Bootstrap Components',
+        category: c.blockCategories.tabPane,
         content: {
             type: 'tabs-tab-pane',
         }

@@ -1,12 +1,12 @@
 import headingIcon from "raw-loader!../icons/heading-solid.svg";
 
-export const HeaderBlock = (bm, label) => {
+export const HeaderBlock = (bm, label, cat) => {
     bm.add('bs-header', {
         label: `
             ${headingIcon}
             <div>${label}</div>
         `,
-        category: 'Bootstrap Typography',
+        category: cat,
         content: {
             type: 'header',
             content: 'Bootstrap heading'

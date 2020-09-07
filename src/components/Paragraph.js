@@ -1,12 +1,12 @@
 import paragraphIcon from "raw-loader!../icons/paragraph-solid.svg";
 
-export const ParagraphBlock = (bm, label) => {
+export const ParagraphBlock = (bm, label, cat) => {
     bm.add('bs-paragraph', {
         label: `
             ${paragraphIcon}
             <div>${label}</div>
         `,
-        category: 'Basic',
+        category: cat,
         content: {
             type: 'paragraph',
             content: 'Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.'

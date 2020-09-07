@@ -1,12 +1,12 @@
 import buttonIcon from "raw-loader!../icons/button.svg";
 
-export const ButtonToolbarBlock = (bm, label) => {
+export const ButtonToolbarBlock = (bm, label, cat) => {
     bm.add('bs-button_toolbar', {
         label: `
             ${buttonIcon}
             <div>${label}</div>
         `,
-        category: 'Forms',
+        category: cat,
         content: {
             type: 'bs-button_toolbar'
         }

@@ -83,7 +83,7 @@ export default (editor, config = {}) => {
     // Bootstrap COMPONENTS
     // Alert
     if (blocks.alert) {
-        AlertBlock(bm, c.labels.alert);
+        AlertBlock(bm, c.labels.alert, c.blockCategories.alert);
     }
 
     if (blocks.tabs) {
@@ -92,7 +92,7 @@ export default (editor, config = {}) => {
 
     // Badge
     if (blocks.badge) {
-        BadgeBlock(bm, c.labels.badge);
+        BadgeBlock(bm, c.labels.badge, c.blockCategories.badge);
     }
 
     // Card
@@ -102,63 +102,63 @@ export default (editor, config = {}) => {
 
     // Collapse
     if (blocks.collapse) {
-        CollapseBlock(bm, c.labels.collapse);
+        CollapseBlock(bm, c.labels.collapse, c.blockCategories.collapse);
     }
 
     // Dropdown
     if (blocks.dropdown) {
-        DropDownBlock(bm, c.labels.dropdown);
+        DropDownBlock(bm, c.labels.dropdown, c.blockCategories.dropdown);
     }
 
 
     // TYPOGRAPHY
     if (blocks.header) {
-        HeaderBlock(bm, c.labels.header);
+        HeaderBlock(bm, c.labels.header, c.blockCategories.header);
     }
     if (blocks.paragraph) {
-        ParagraphBlock(bm, c.labels.paragraph);
+        ParagraphBlock(bm, c.labels.paragraph, c.blockCategories.paragraph);
     }
 
     if (blocks.form) {
-        FormBlock(bm, c.labels.form);
+        FormBlock(bm, c.labels.form, c.blockCategories.form);
     }
 
     if (blocks.input) {
-        InputBlock(bm, c.labels.input);
+        InputBlock(bm, c.labels.input, c.blockCategories.input);
 
-        FileInputBlock(bm, c.labels.file_input);
+        FileInputBlock(bm, c.labels.file_input, c.blockCategories.file_input);
     }
 
     if (blocks.form_group_input) {
-        InputGroupBlock(bm, c.labels.form_group_input);
+        InputGroupBlock(bm, c.labels.form_group_input, c.blockCategories.form_group_input);
     }
 
     if (blocks.textarea) {
-        TextareaBlock(bm, c.labels.textarea);
+        TextareaBlock(bm, c.labels.textarea, c.blockCategories.textarea);
     }
 
     if (blocks.select) {
-        SelectBlock(bm, c.labels.select);
+        SelectBlock(bm, c.labels.select, c.blockCategories.select);
     }
 
     if (blocks.checkbox) {
-        CheckboxBlock(bm, c.labels.checkbox);
+        CheckboxBlock(bm, c.labels.checkbox, c.blockCategories.checkbox);
     }
 
     if (blocks.radio) {
-        RadioBlock(bm, c.labels.radio);
+        RadioBlock(bm, c.labels.radio, c.blockCategories.radio);
     }
 
     if (blocks.label) {
-        LabelBlock(bm, c.labels.label);
+        LabelBlock(bm, c.labels.label, c.blockCategories.label);
     }
 
     if (blocks.button) {
-        ButtonBlock(bm, c.labels.button);
+        ButtonBlock(bm, c.labels.button, c.blockCategories.button);
     }
 
     if (blocks.button_group) {
-        ButtonGroupBlock(bm, c.labels.button_group);
+        ButtonGroupBlock(bm, c.labels.button_group, c.blockCategories.button_group);
     }
 
     if (blocks.button_toolbar) {

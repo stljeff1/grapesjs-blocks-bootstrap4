@@ -4,13 +4,13 @@ known issues:
 
 import compressIcon from "raw-loader!../icons/compress-solid.svg";
 
-export const CollapseBlock = (bm, label) => {
+export const CollapseBlock = (bm, label, cat) => {
   bm.add('bs-collapse', {
     label: `
             ${compressIcon}
             <div>${label}</div>
         `,
-    category: 'Bootstrap Components',
+    category: cat,
     content: {
       type: 'bs-collapse'
     }

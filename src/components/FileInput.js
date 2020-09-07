@@ -1,13 +1,13 @@
 import {elHasClass} from "../utils";
 import fileInputIcon from "raw-loader!../icons/file-input.svg";
 
-export const FileInputBlock = (bm, label) => {
+export const FileInputBlock = (bm, label, cat) => {
     bm.add('bs-file-input', {
         label: `
             ${fileInputIcon}
             <div>${label}</div>
         `,
-        category: 'Bootstrap Forms',
+        category: cat,
         content: `<input type="file" name="file" class="form-control-file" id="exampleFormControlFile1">`
     });
 };

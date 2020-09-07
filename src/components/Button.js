@@ -3,10 +3,10 @@ import contexts from '../bootstrap-contexts';
 import sizes from '../bootstrap-btn-sizes';
 import buttonIcon from "raw-loader!../icons/button.svg";
 
-export const ButtonBlock = (bm, label) => {
+export const ButtonBlock = (bm, label, cat) => {
     bm.add('bs-button', {
         label: `${buttonIcon}<div>${label}</div>`,
-        category: 'Bootstrap Forms',
+        category: cat,
         content: '<button class="btn btn-primary">Send</button>',
     });
 };

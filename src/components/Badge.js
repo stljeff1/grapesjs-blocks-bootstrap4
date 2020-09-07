@@ -2,13 +2,13 @@ import _s from "underscore.string";
 import contexts from '../bootstrap-contexts';
 import certificateIcon from "raw-loader!../icons/certificate-solid.svg";
 
-export const BadgeBlock = (bm, label) => {
+export const BadgeBlock = (bm, label, cat) => {
     bm.add('bs-badge', {
         label: `
             ${certificateIcon}
             <div>${label}</div>
         `,
-        category: 'Bootstrap Components',
+        category: cat,
         content: {
             type: 'bs-badge',
             content: 'New!'

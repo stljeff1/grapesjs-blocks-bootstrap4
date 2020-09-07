@@ -1,11 +1,11 @@
 import inputIcon from "raw-loader!../icons/input.svg";
 
-export const InputBlock = (bm, label) => {
+export const InputBlock = (bm, label, cat) => {
     bm.add('bs-input', {
         label: `
       ${inputIcon}
       <div>${label}</div>`,
-        category: 'Bootstrap Forms',
+        category: cat,
         content: '<input name="input1" class="form-control"/>',
     });
 };

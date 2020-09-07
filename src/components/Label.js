@@ -1,11 +1,11 @@
 import labelIcon from "raw-loader!../icons/label.svg";
 
-export const LabelBlock = (bm, label) => {
+export const LabelBlock = (bm, label, cat) => {
     bm.add('bs-label', {
         label: `
       ${labelIcon}
       <div>${label}</div>`,
-        category: 'Bootstrap Forms',
+        category: cat,
         content: '<label>Label</label>',
     });
 };

@@ -1,11 +1,11 @@
 import selectIcon from "raw-loader!../icons/select-input.svg";
 
-export const SelectBlock = (bm, label) => {
+export const SelectBlock = (bm, label, cat) => {
     bm.add('bs-select', {
         label: `
       ${selectIcon}
       <div>${label}</div>`,
-        category: 'Bootstrap Forms',
+        category: cat,
         content: `<select class="form-control" name="select1">
         ${label ? `<option value="">${label}</option>` : ''}
         <option value="1">${label} 1</option>

@@ -1,12 +1,12 @@
 import checkIcon from "raw-loader!../icons/check-square-solid.svg";
 
-export const CheckboxBlock = (bm, label) => {
+export const CheckboxBlock = (bm, label, cat) => {
     bm.add('bs-checkbox', {
         label: `
             ${checkIcon}
             <div>${label}</div>
         `,
-        category: 'Bootstrap Forms',
+        category: cat,
         content: `
         <div class="form-check">
           <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">

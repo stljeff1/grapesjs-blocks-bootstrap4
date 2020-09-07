@@ -2,13 +2,13 @@ import _s from "underscore.string";
 import contexts from '../bootstrap-contexts';
 import exclamationIcon from "raw-loader!../icons/exclamation-triangle-solid.svg";
 
-export const AlertBlock = (bm, label) => {
+export const AlertBlock = (bm, label, cat) => {
     bm.add('bs-alert', {
         label: `
             ${exclamationIcon}
             <div>${label}</div>
         `,
-        category: 'Bootstrap Components',
+        category: cat,
         content: {
             type: 'bs-alert',
             content: 'This is an alert—check it out!'

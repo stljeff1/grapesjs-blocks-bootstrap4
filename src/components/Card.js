@@ -11,7 +11,7 @@ export const CardBlock = (bm, c) => {
             ${cardIcon}
             <div>${c.labels.card}</div>
         `,
-    category: 'Bootstrap Components',
+    category: c.blockCategories.card,
     content: {
       type: 'bs-card'
     }
@@ -21,7 +21,7 @@ export const CardBlock = (bm, c) => {
             ${cardIcon}
             <div>${c.labels.card_container}</div>
         `,
-    category: 'Bootstrap Components',
+    category: c.blockCategories.card_container,
     content: {
       type: 'bs-card_container'
     }

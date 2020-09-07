@@ -1,13 +1,13 @@
 import sizes from '../bootstrap-btn-sizes';
 import buttonIcon from "raw-loader!../icons/button.svg";
 
-export const ButtonGroupBlock = (bm, label) => {
+export const ButtonGroupBlock = (bm, label, cat) => {
     bm.add('bs-button_group', {
         label: `
             ${buttonIcon}
             <div>${label}</div>
         `,
-        category: 'Forms',
+        category: cat,
         content: {
             type: 'bs-button_group'
         }

@@ -1,12 +1,12 @@
 import radioIcon from "raw-loader!../icons/dot-circle-regular.svg";
 
-export const RadioBlock = (bm, label) => {
+export const RadioBlock = (bm, label, cat) => {
     bm.add('bs-radio', {
         label: `
             ${radioIcon}
             <div>${label}</div>
         `,
-        category: 'Bootstrap Forms',
+        category: cat,
         content: `
         <div class="form-check">
           <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>

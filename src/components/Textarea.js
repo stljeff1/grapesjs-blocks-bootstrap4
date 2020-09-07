@@ -1,11 +1,11 @@
 import textareaIcon from "raw-loader!../icons/textarea.svg";
 
-export const TextareaBlock = (bm, label) => {
+export const TextareaBlock = (bm, label, cat) => {
     bm.add('bs-textarea', {
         label: `
       ${textareaIcon}
       <div>${label}</div>`,
-        category: 'Bootstrap Forms',
+        category: cat,
         content: '<textarea name="textarea1" class="form-control"></textarea>',
     });
 };

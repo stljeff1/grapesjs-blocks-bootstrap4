@@ -5,13 +5,13 @@ known issues:
 
 import caretIcon from "raw-loader!../icons/caret-square-down-regular.svg";
 
-export const DropDownBlock = (bm, label) => {
+export const DropDownBlock = (bm, label, cat) => {
     bm.add('bs-dropdown', {
         label: `
             ${caretIcon}
             <div>${label}</div>
         `,
-        category: 'Bootstrap Components',
+        category: cat,
         content: {
             type: 'bs-dropdown'
         }

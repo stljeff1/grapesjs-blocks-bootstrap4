@@ -1,11 +1,11 @@
 import formIcon from "raw-loader!../icons/form.svg";
 
-export const FormBlock = (bm, label) => {
+export const FormBlock = (bm, label, cat) => {
     bm.add('bs-form', {
         label: `
       ${formIcon}
       <div>${label}</div>`,
-        category: 'Bootstrap Forms',
+        category: cat,
         content: `
         <form>
           <div class="form-group">
