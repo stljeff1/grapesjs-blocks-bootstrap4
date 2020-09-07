@@ -162,7 +162,7 @@ export default (editor, config = {}) => {
     }
 
     if (blocks.button_toolbar) {
-        ButtonToolbarBlock(bm, c.labels.button_toolbar, c);
+        ButtonToolbarBlock(bm, c.labels.button_toolbar, c.blockCategories.button_toolbar);
     }
 }
 
