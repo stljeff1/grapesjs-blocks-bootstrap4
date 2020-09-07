@@ -1,12 +1,12 @@
 import columnsIcon from 'raw-loader!../icons/columns-solid.svg';
 
-export const MediaObjectBlock = (bm, label) => {
+export const MediaObjectBlock = (bm, label, cat) => {
     bm.add('media_object', {
         label: `
             ${columnsIcon}
             <div>${label}</div>
         `,
-        category: 'Bootstrap Layout',
+        category: cat,
         content: `<div class="media">
                  <img class="mr-3" src="">
                  <div class="media-body">

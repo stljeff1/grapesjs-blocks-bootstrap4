@@ -1,12 +1,12 @@
 import equalsIcon from "raw-loader!../icons/equals-solid.svg";
 
-export const ColumnBreakBlock = (bm, label) => {
+export const ColumnBreakBlock = (bm, label, cat) => {
     bm.add('bs-column_break', {
         label: `
             ${equalsIcon}
             <div>${label}</div>
         `,
-        category: 'Bootstrap Layout',
+        category: cat,
         content: {
             type: 'bs-column_break'
         }

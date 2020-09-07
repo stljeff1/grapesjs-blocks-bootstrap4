@@ -1,12 +1,12 @@
 import windowIcon from "raw-loader!../icons/window-maximize-solid.svg";
 
-export const RowBlock = (bm, label) => {
+export const RowBlock = (bm, label, cat) => {
     bm.add('bs-row', {
         label: `
             ${windowIcon}
             <div>${label}</div>
         `,
-        category: 'Bootstrap Layout',
+        category: cat,
         content: {
             type: 'bs-row',
             classes: ['row']

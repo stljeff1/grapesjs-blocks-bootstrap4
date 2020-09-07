@@ -6,13 +6,13 @@ known issues:
 import _ from "underscore";
 import linkIcon from "raw-loader!../icons/link-solid.svg";
 
-export const LinkBlock = (bm, label) => {
+export const LinkBlock = (bm, label, cat) => {
     bm.add('bs-link', {
         label: `
             ${linkIcon}
             <div>${label}</div>
         `,
-        category: 'Bootstrap Basic',
+        category: cat,
         content: {
             type: 'link',
             content: 'Link text'

@@ -1,12 +1,12 @@
 import imageIcon from "raw-loader!../icons/image-solid.svg";
 
-export const ImageBlock = (bm, label) => {
+export const ImageBlock = (bm, label, cat) => {
     bm.add('bs-image', {
         label: `
             ${imageIcon}
             <div>${label}</div>
         `,
-        category: 'Media',
+        category: cat,
         content: {
             type: 'bs-image'
         }

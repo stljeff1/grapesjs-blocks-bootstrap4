@@ -35,22 +35,22 @@ export default (editor, config = {}) => {
     const cats = c.blockCategories;
 
     if (blocks.image) {
-        ImageBlock(bm, c.labels.image);
+        ImageBlock(bm, c.labels.image, c.blockCategories.image);
     }
 
     if (blocks.video) {
-        VideoBlock(bm, c.labels.video);
+        VideoBlock(bm, c.labels.video), c.blockCategories.video;
     }
 
     // Rebuild the default component and add utility settings to it (border, bg, color, etc)
     // Rebuild the text component and add display utility setting
     if (blocks.text) {
-        TextBlock(bm, c.labels.text);
+        TextBlock(bm, c.labels.text, c.blockCategories.text);
     }
 
     // Rebuild the link component with settings for collapse-control
     if (blocks.link) {
-        LinkBlock(bm, c.labels.link);
+        LinkBlock(bm, c.labels.link, c.blockCategories.link);
     }
 
     // Basic
@@ -65,19 +65,19 @@ export default (editor, config = {}) => {
 
     // LAYOUT
     if (blocks.container) {
-        ContainerBlock(bm, c.labels.container);
+        ContainerBlock(bm, c.labels.container, c.blockCategories.container);
     }
     if (blocks.row) {
-        RowBlock(bm, c.labels.row);
+        RowBlock(bm, c.labels.row, c.blockCategories.row);
     }
     if (blocks.column) {
-        ColumnBlock(bm, c.labels.column);
+        ColumnBlock(bm, c.labels.column, c.blockCategories.column);
 
-        ColumnBreakBlock(bm, c.labels.column_break);
+        ColumnBreakBlock(bm, c.labels.column_break, c.blockCategories.column_break);
     }
     // Media object
     if (blocks.media_object) {
-        MediaObjectBlock(bm, c.labels.media_object);
+        MediaObjectBlock(bm, c.labels.media_object, c.blockCategories.media_object);
     }
 
     // Bootstrap COMPONENTS

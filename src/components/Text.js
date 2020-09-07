@@ -1,12 +1,12 @@
 import fontIcon from "raw-loader!../icons/font-solid.svg";
 
-export const TextBlock = (bm, label) => {
+export const TextBlock = (bm, label, cat) => {
     bm.add('bs-text', {
         label: `
             ${fontIcon}
             <div>${label}</div>
         `,
-        category: 'Bootstrap Typography',
+        category: cat,
         content: {
             type:'text',
             content: 'Insert your text here'

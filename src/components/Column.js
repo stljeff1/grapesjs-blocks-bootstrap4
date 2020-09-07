@@ -1,12 +1,12 @@
 import columnsIcon from "raw-loader!../icons/columns-solid.svg";
 
-export const ColumnBlock = (bm, label) => {
+export const ColumnBlock = (bm, label, cat) => {
     bm.add('bs-column', {
         label: `
             ${columnsIcon}
             <div>${label}</div>
         `,
-        category: 'Bootstrap Layout',
+        category: cat,
         content: {
             type: 'bs-column',
             classes: ['col']

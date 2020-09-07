@@ -1,12 +1,12 @@
 import videoIcon from "raw-loader!../../icons/youtube-brands.svg";
 
-export const VideoBlock = (bm, label) => {
+export const VideoBlock = (bm, label, cat) => {
     bm.add('bs-video', {
         label: `
             ${videoIcon}
             <div>${label}</div>
         `,
-        category: 'Media',
+        category: cat,
         content: {
             type: 'bs-video'
         }

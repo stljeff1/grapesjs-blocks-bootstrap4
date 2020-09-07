@@ -92,10 +92,13 @@ export default (editor, opts = {}) => {
 };
 
 export const addBlocks = (editor, blocks, opts) => {
+  const opts_labels = opts.labels || {}
+  const opts_blockCategories = opts.blockCategories || {}
   let options = { ...{
+    components: {},
     blocks,
-    labels: Object.assign(default_labels, opts.labels),
-    blockCategories: Object.assign(default_block_categories, opts.blockCategories),
+    labels: Object.assign(default_labels, opts_labels),
+    blockCategories: Object.assign(default_block_categories, opts_blockCategories),
     optionsStringSeparator: '::',
     classNavigation: 'nav',
     classTabPanes: 'tab-content',
