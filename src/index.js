@@ -4,6 +4,8 @@ import loadTraits from './traits';
 import loadComponents from './components';
 import loadDevices from './devices';
 
+export * from './blocks';
+
 const loadCss = editor => {
   editor.Config.canvasCss += `
     /* Layout */
