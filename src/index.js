@@ -24,7 +24,6 @@ const loadCss = editor => {
     .gjs-dashed img {
       min-width: 25px;
       min-height: 25px;
-      background-color: rgba(0,0,0,0.5);
     }
 
     /* Components */
