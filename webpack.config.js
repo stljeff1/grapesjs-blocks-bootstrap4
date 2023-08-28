@@ -12,13 +12,13 @@ module.exports = (env = {}) => {
     // env.production = false;
 
     if (env.production) {
-        optimization.minimizer = [
-            new UglifyJsPlugin({
-                cache: true,
-                parallel: true,
-                sourceMap: true
-            })
-        ];
+        // optimization.minimizer = [
+        //     new UglifyJsPlugin({
+        //         cache: true,
+        //         parallel: true,
+        //         sourceMap: true
+        //     })
+        // ];
         plugins = [
             new webpack.BannerPlugin(`${name} - ${pkg.version}`),
         ]
